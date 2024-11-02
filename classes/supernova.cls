@@ -10,8 +10,8 @@
   paper=a4 , %用紙サイズ(a4paperがdefault)
   book , %文書クラス(articleがdefault)
   openany, % 章が奇数ページから始まる指定の無効化
-  fontsize=10pt , %フォントサイズ(10ptがdefault)
-  jafontsize=10pt, % 日本語フォントサイズを10pt
+  fontsize=12pt , %フォントサイズ(10ptがdefault)
+  jafontsize=12pt, % 日本語フォントサイズを10pt
   gutter=25.6mm, % のどの余白を25.6mm
   head_space=20mm, % 余白(上)を20mm
   foot_space=20mm, % 余白(下)を20mm
@@ -21,6 +21,13 @@
   %sidenote_length={4zw}, %sidenoteの脚注幅設定
 ]{jlreq} %今一番モダンな日本語クラスファイル
 
+\jlreqsetup{
+  %キャプション設定
+  caption_font = {\normalfont},
+  caption_label_font = {\normalfont\gtfamily\sffamily},
+  caption_after_label_space = {1\zw},
+  caption_label_format = {#1},
+}
 % \PassOptionsToPackage{hyphens}{url} % これいるかは怪しい
 \usepackage{luatexja} % LuaLaTeXに移行
 \usepackage{subfiles} % 大規模な文章を分割して記述して、統合するためのパッケージ
@@ -54,9 +61,9 @@
   unicode,
   hidelinks,
   colorlinks=true,
-  linkcolor=darkgray, 
+  linkcolor=darkgray,
   citecolor=darkgray,
-  urlcolor=Blue, 
+  urlcolor=Blue,
   hyperfootnotes=false
   ]{hyperref}
 % urlやハイパーリンクを可能にする。colorlinks=true,allcolors=blueでリンク部分が青くなる。
@@ -74,19 +81,8 @@
 % \setmainjfont{Noto Serif}[BoldFont=Noto Serif Bold]
 % \setsansjfont{Noto Sans}[BoldFont=Noto Sans Bold]
 % \setmonojfont{Noto Sans Mono}[BoldFont=Noto Sans Mono Bold]
-
 \usepackage{emoji}
-\setemojifont{TwemojiMozilla} % \setemojifont{Noto Color Emoji}[Renderer=HarfBuzz]または\setemojifont{EmojiOneMozilla}
-\newjfontfamily{\jMplus}[ % {\jMplus hoge}で指定した箇所(hoge)のみを「M PLUS 2」フォントで出力させる命令
-  YokoFeatures={JFM=jlreq},
-  TateFeatures={JFM=jlreqv},
-]{font/Mplus2-Regular.ttf}
-\newfontfamily{\Mplus}{font/Mplus2-Regular.ttf}
-\newfontfamily{\MplusCode}{font/Mplus1Code-Regular.ttf}
-% \newjfontfamily{\jCine}[ % {\jCine hoge}で指定した箇所(hoge)のみを「しねきゃぷしょん」フォントで出力させる命令
-%   YokoFeatures={JFM=jlreq},
-%   TateFeatures={JFM=jlreqv},
-% ]{cinecaption}
+\setemojifont{TwemojiMozilla}
 \usepackage{tabularx} % 表の幅を指定できる
 % hyperrefと競合するため、hyperrefより後で宣言する（これでもグレーらしい）
 \usepackage{amsmath,amssymb} % 数式関連 (ONにした場合は末尾の\eqrefを\renewcommandに変更)
@@ -96,7 +92,7 @@
 \usepackage{listings} % \lstlistingなどコードの掲載に必要
 %listing環境の調整
 \lstset{
-  % basicstyle={\MplusCode},
+  basicstyle={\ttfamily},
   identifierstyle={\small},
   commentstyle={\smallitshape},
   keywordstyle={\small\bfseries},
@@ -146,7 +142,7 @@
 \SaveHeading{section}{\restoresection} % \sectionの中身を\restoresectionに待避．
 
 \RenewBlockHeading{section}{1}{
-font={\fontsize{10pt}{0}\bfseries},
+font={\normalsize\bfseries},
 format={%
   \begin{tikzpicture}
     \useasboundingbox (0,0) rectangle (0,0);
@@ -162,7 +158,7 @@ after_space=1.5ex,
 
 \SaveHeading{subsection}{\restoresubsection} % \subsectionの中身を\restoresubsectionに待避．
 \RenewBlockHeading{subsection}{1}{
-font={\fontsize{10pt}{0}\bfseries},
+font={\normalsize\bfseries},
 format={%
   \begin{tikzpicture}
     \useasboundingbox (0,0) rectangle (0,0);
@@ -176,7 +172,7 @@ after_space=1.5ex,
 
 \SaveHeading{subsubsection}{\restoresubsubsection} % \subsectionの中身を\restoresubsectionに待避．
 \RenewBlockHeading{subsubsection}{1}{
-font={\fontsize{10pt}{0}\bfseries},
+font={\normalsize\bfseries},
 format={#1#2},
 after_label_space=1\zw ,
 before_space=2.5ex,
