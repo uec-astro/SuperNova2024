@@ -1,59 +1,63 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[a4paper,10pt]{jarticle}
-\usepackage[dvipdfmx]{graphicx}
-\usepackage{amsmath, amssymb}
-\usepackage{latexsym}
-\usepackage{multirow}
-\usepackage{here}
-\usepackage{url}
-\usepackage{bm}
-\usepackage{longtable}
-\usepackage{dcolumn}
-\usepackage{ascmac}
-\setlength{\textwidth}{165mm} %165mm-marginparwidth
-\setlength{\marginparwidth}{40mm}
-\setlength{\textheight}{240mm}
-\setlength{\topmargin}{-20mm}
-\setlength{\oddsidemargin}{-3.5mm}
-
-\def\vector#1{\mbox{\boldmath $#1$}}
-\newcommand{\AmSLaTeX}{%
- $\mathcal A$\lower.4ex\hbox{$\!\mathcal M\!$}$\mathcal S$-\LaTeX}
-\newcommand{\PS}{{\scshape Post\-Script}}
-\def\BibTeX{{\rmfamily B\kern-.05em{\scshape i\kern-.025em b}\kern-.08em
- T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
-\newcommand{\pderiv}[2]{{\partial#1\over\partial#2}}
-\newcommand{\deriv}[2]{{{\rm d}#1\over{\rm d}#2}}
-\newcommand{\dderiv}[2]{{{\rm d}^2#1\over{\rm d}#2^2}}
-\newcommand{\DeLta}{{\mit\Delta}}
-\renewcommand{\d}{{\rm d}}
-\def\wcaption#1{\caption[]{\parbox[t]{100mm}{#1}}}
-\def\rm#1{\mathrm{#1}}
-\def\tempC{^\circ \rm{C}}
-
-
-\makeatletter
-%\def\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus % -.2ex}{2.3ex plus .2ex}{\Large\bf}}
-\def\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus
--.2ex}{2.3ex plus .2ex}{\normalsize\bf}}
-\makeatother
-
-\makeatletter
-\def\subsection{\@startsection {subsection}{1}{\z@}{-3.5ex plus -1ex minus
--.2ex}{2.3ex plus .2ex}{\normalsize\bf}}
-\makeatother
-
-\makeatletter
-\def\@seccntformat#1{\@ifundefined{#1@cntformat}%
-   {\csname the#1\endcsname\quad}%      default
-   {\csname #1@cntformat\endcsname}%    enable indiv idual control
-}
-\makeatother
-
+% \documentclass[a4paper,10pt]{jarticle}
+% \usepackage[dvipdfmx]{graphicx}
+% \usepackage{amsmath, amssymb}
+% \usepackage{latexsym}
+% \usepackage{multirow}
+% \usepackage{here}
+% \usepackage{url}
+% \usepackage{bm}
+% \usepackage{longtable}
+% \usepackage{dcolumn}
+% \usepackage{ascmac}
+% \setlength{\textwidth}{165mm} %165mm-marginparwidth
+% \setlength{\marginparwidth}{40mm}
+% \setlength{\textheight}{240mm}
+% \setlength{\topmargin}{-20mm}
+% \setlength{\oddsidemargin}{-3.5mm}
+%
+% \def\vector#1{\mbox{\boldmath $#1$}}
+% \newcommand{\AmSLaTeX}{%
+%  $\mathcal A$\lower.4ex\hbox{$\!\mathcal M\!$}$\mathcal S$-\LaTeX}
+% \newcommand{\PS}{{\scshape Post\-Script}}
+% \def\BibTeX{{\rmfamily B\kern-.05em{\scshape i\kern-.025em b}\kern-.08em
+%  T\kern-.1667em\lower.7ex\hbox{E}\kern-.125em X}}
+% \newcommand{\pderiv}[2]{{\partial#1\over\partial#2}}
+% \newcommand{\deriv}[2]{{{\rm d}#1\over{\rm d}#2}}
+% \newcommand{\dderiv}[2]{{{\rm d}^2#1\over{\rm d}#2^2}}
+% \newcommand{\DeLta}{{\mit\Delta}}
+% \renewcommand{\d}{{\rm d}}
+% \def\wcaption#1{\caption[]{\parbox[t]{100mm}{#1}}}
+% \def\rm#1{\mathrm{#1}}
+% \def\tempC{^\circ \rm{C}}
+%
+%
+% \makeatletter
+% %\def\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus % -.2ex}{2.3ex plus .2ex}{\Large\bf}}
+% \def\section{\@startsection {section}{1}{\z@}{-3.5ex plus -1ex minus
+% -.2ex}{2.3ex plus .2ex}{\normalsize\bf}}
+% \makeatother
+%
+% \makeatletter
+% \def\subsection{\@startsection {subsection}{1}{\z@}{-3.5ex plus -1ex minus
+% -.2ex}{2.3ex plus .2ex}{\normalsize\bf}}
+% \makeatother
+%
+% \makeatletter
+% \def\@seccntformat#1{\@ifundefined{#1@cntformat}%
+%    {\csname the#1\endcsname\quad}%      default
+%    {\csname #1@cntformat\endcsname}%    enable indiv idual control
+% }
+% \makeatother
+%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%! TEX root = ../main.tex
+\documentclass[../main]{subfiles}
 
 \begin{document}
-\rightline{4年(OB) 川口 美玲} % 学年と名前（ハンドルネームでも可）
+% \rightline{4年(OB) 川口 美玲} % 学年と名前（ハンドルネームでも可）
+{
+\small
 \vskip\baselineskip
 \vskip\baselineskip
 \vskip\baselineskip
@@ -95,5 +99,7 @@
 参考文献\\
 天文学辞典, \url{https://astro-dic.jp/}\\
 天文宇宙検定公式テキスト4級, 3級
+}
+
 
 \end{document}
