@@ -30,6 +30,9 @@
 # *.pdf
 *.svg
 !figures/*.pdf
+id_rsa_github
+id_rsa_github.pub
+
 
 # Ignore node_modules
 node_modules/
