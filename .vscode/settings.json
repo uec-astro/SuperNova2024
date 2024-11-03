@@ -137,6 +137,10 @@
     "editor.wordSeparators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?．。，、（）「」［］｛｝《》てにをはがのともへでや",
     "editor.formatOnSave": false,
     "editor.wordWrap": "on",
-    "cloudlatex.enabled": true,
+    "cloudlatex.enabled": false,
     "cloudlatex.projectId": 932198,
+    "cloudlatex.autoCompile": false,
+    "cloudlatex.supressIcon": true,
+    "editor.defaultFormatter": "James-Yu.latex-workshop",
+    "cloudlatex.outDir": "out",
 }
