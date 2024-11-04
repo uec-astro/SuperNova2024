@@ -74,15 +74,25 @@
 
 \usepackage[no-math, noto-otf]{luatexja-preset} % フォントの指定
 % 和文フォント設定（上から明朝、ゴシック、等幅）
-% \setmainjfont{Noto Serif CJK JP}[BoldFont=Noto Serif CJK JP Bold]
-% \setsansjfont{Noto Sans CJK JP}[BoldFont=Noto Sans CJK JP Bold]
-% \setmonojfont{Noto Sans Mono CJK JP}[BoldFont=Noto Sans Mono CJK JP Bold]
+\setmainjfont{Noto Serif CJK JP}[BoldFont=Noto Serif CJK JP Bold, AutoFakeSlant=0.25]
+\setsansjfont{Noto Sans CJK JP}[BoldFont=Noto Sans CJK JP Bold, AutoFakeSlant=0.25]
+\setmonojfont{Noto Sans Mono CJK JP}[BoldFont=Noto Sans Mono CJK JP Bold]
 % 欧文フォント設定（上からSerif, Sanserif, Monospace）
 % \setmainjfont{Noto Serif}[BoldFont=Noto Serif Bold]
 % \setsansjfont{Noto Sans}[BoldFont=Noto Sans Bold]
 % \setmonojfont{Noto Sans Mono}[BoldFont=Noto Sans Mono Bold]
 \usepackage{emoji}
 \setemojifont{TwemojiMozilla}
+\newjfontfamily{\jMplus}[ % {\jMplus hoge}で指定した箇所(hoge)のみを「M PLUS 2」フォントで出力させる命令
+  YokoFeatures={JFM=jlreq},
+  TateFeatures={JFM=jlreqv},
+]{M PLUS 2}
+\newfontfamily{\Mplus}{M PLUS 2}
+\newfontfamily{\MplusCode}{M PLUS 1 Code}
+% \newjfontfamily{\jCine}[ % {\jCine hoge}で指定した箇所(hoge)のみを「しねきゃぷしょん」フォントで出力させる命令
+%   YokoFeatures={JFM=jlreq},
+%   TateFeatures={JFM=jlreqv},
+% ]{cinecaption}
 \usepackage{tabularx} % 表の幅を指定できる
 % hyperrefと競合するため、hyperrefより後で宣言する（これでもグレーらしい）
 \usepackage{amsmath,amssymb} % 数式関連 (ONにした場合は末尾の\eqrefを\renewcommandに変更)
@@ -92,7 +102,7 @@
 \usepackage{listings} % \lstlistingなどコードの掲載に必要
 %listing環境の調整
 \lstset{
-  basicstyle={\ttfamily},
+  basicstyle={\MplusCode},
   identifierstyle={\small},
   commentstyle={\smallitshape},
   keywordstyle={\small\bfseries},
@@ -130,7 +140,7 @@
 %%%   別行見出し(setionとか)の出力設定（jlreq仕様）  %%%
 \SaveHeading{chapter}{\restorechapter}
 \ModifyHeading{chapter}{
-  font={\Large\bfseries},
+  font={\Large\bfseries\jMplus\Mplus},
   %label_format={\includegraphics[width=2\zw]{small_star2_skyblue.png}\raisebox{0.5\zw}{\hspace{-1.3\zw}\thechapter}},
   format={
     \centering
@@ -142,7 +152,7 @@
 \SaveHeading{section}{\restoresection} % \sectionの中身を\restoresectionに待避．
 
 \RenewBlockHeading{section}{1}{
-font={\normalsize\bfseries},
+font={\normalsize\bfseries\jMplus\Mplus},
 format={%
   \begin{tikzpicture}
     \useasboundingbox (0,0) rectangle (0,0);
@@ -158,7 +168,7 @@ after_space=1.5ex,
 
 \SaveHeading{subsection}{\restoresubsection} % \subsectionの中身を\restoresubsectionに待避．
 \RenewBlockHeading{subsection}{1}{
-font={\normalsize\bfseries},
+font={\normalsize\bfseries\jMplus\Mplus},
 format={%
   \begin{tikzpicture}
     \useasboundingbox (0,0) rectangle (0,0);
@@ -172,7 +182,7 @@ after_space=1.5ex,
 
 \SaveHeading{subsubsection}{\restoresubsubsection} % \subsectionの中身を\restoresubsectionに待避．
 \RenewBlockHeading{subsubsection}{1}{
-font={\normalsize\bfseries},
+font={\normalsize\bfseries\jMplus\Mplus},
 format={#1#2},
 after_label_space=1\zw ,
 before_space=2.5ex,
