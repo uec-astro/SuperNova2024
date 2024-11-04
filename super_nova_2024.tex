@@ -21,12 +21,12 @@
 % \gtfamily\sffamily % 本文をゴシック体サンセリフ体に統一する
 \includepdf[noautoscale=true, fitpaper]{cover/2024_super_nova_cover.pdf} %表紙
 \frontmatter
-\cleardoublepage
 \setcounter{page}{1} %ページカウンタのセット
 \subfile{sections/goaisatu} % ご挨拶ページ
+\subfile{sections/Mizuyoshi/mizuyoshi} % 2p
 \setcounter{tocdepth}{1} % 目次に表示する見出しの深さ指定 0:chapter 1:section 2:subsection 3:subsubsection
 \tableofcontents % 目次
-\cleartooddpage% 奇数ページまでジャンプ
+% \cleartooddpage% 奇数ページまでジャンプ
 
 \mainmatter
 %%%%%%%%%   ここから本編   %%%%%%%%
@@ -36,12 +36,12 @@
 \subfile{sections/Nakahara/main.tex} % 7p
 \subfile{sections/mori/main} % 4p
 \subfile{sections/Maruyama/main} % 4p
-\cleartoevenpage
+\subfile{sections/Onosaka/Bushi_Onosaka} % 1p
+
 \article{天文クロスワード}{4年(OB) 川口 美玲}{sections/kawaguchi/crossword_question.pdf} % 1p
 \subfile{sections/kawaguchi/crossword_2024} % 1p
 \subfile{sections/Fujisawa/fujisawa} % 7p
-\subfile{sections/Kurahara/template} % 5p
-\subfile{sections/Onosaka/Bushi_Onosaka} % 1p
+\subfile{sections/Kurahara/template} % 6p
 \subfile{sections/moriyama/moriyama} % 8p
 \subfile{sections/Kokubun/main} % 5p
 
@@ -53,8 +53,8 @@
 \subfile{sections/kouki} % 編集後記
 %\printbibliography[title=参考文献]
 %\addcontentsline{toc}{chapter}{参考文献}
+\cleartoevenpage
 \includepdf[noautoscale=true, fitpaper]{cover/2024_atogaki.pdf}
-\cleardoublepage
 \cleartoevenpage % 奇数ページまでジャンプ
 \includepdf[noautoscale=true, fitpaper]{cover/supernova_backcover_2024.pdf} % 裏表紙
 \end{document}
