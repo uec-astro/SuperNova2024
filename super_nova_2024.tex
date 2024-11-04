@@ -21,6 +21,7 @@
 % \gtfamily\sffamily % 本文をゴシック体サンセリフ体に統一する
 \includepdf[noautoscale=true, fitpaper]{cover/2024_super_nova_cover.pdf} %表紙
 \frontmatter
+\cleardoublepage
 \setcounter{page}{1} %ページカウンタのセット
 \subfile{sections/goaisatu} % ご挨拶ページ
 \setcounter{tocdepth}{1} % 目次に表示する見出しの深さ指定 0:chapter 1:section 2:subsection 3:subsubsection
@@ -49,6 +50,7 @@
 
 \backmatter % あとがき、編集後記はこの下に
 \subfile{sections/kouki} % 編集後記
+\cleardoublepage
 %\printbibliography[title=参考文献]
 %\addcontentsline{toc}{chapter}{参考文献}
 \includepdf[noautoscale=true, fitpaper]{cover/2024_atogaki.pdf}
