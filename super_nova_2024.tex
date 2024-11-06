@@ -23,24 +23,25 @@
 \frontmatter
 \setcounter{page}{1} %ページカウンタのセット
 \subfile{sections/goaisatu} % ご挨拶ページ
-\subfile{sections/Mizuyoshi/mizuyoshi} % 2p
 \setcounter{tocdepth}{1} % 目次に表示する見出しの深さ指定 0:chapter 1:section 2:subsection 3:subsubsection
 \tableofcontents % 目次
 % \cleartooddpage% 奇数ページまでジャンプ
 
+% ここまで6p
 \mainmatter
 %%%%%%%%%   ここから本編   %%%%%%%%
 % \subfile{hogehoge} % hogehoge.texを読み込む
 % \subfile{sections/contents}
+\subfile{sections/Mizuyoshi/mizuyoshi} % 5p
 \subfile{sections/Nitta_Tokura/natugassyuku} % 11p
-\subfile{sections/Nakahara/main.tex} % 7p
+\subfile{sections/Nakahara/main.tex} % 5p
 \subfile{sections/mori/main} % 4p
 \subfile{sections/Maruyama/main} % 4p
-\subfile{sections/Onosaka/Bushi_Onosaka} % 1p
 
 \article{天文クロスワード}{4年(OB) 川口 美玲}{sections/kawaguchi/crossword_question.pdf} % 1p
 \subfile{sections/kawaguchi/crossword_2024} % 1p
 \subfile{sections/Fujisawa/fujisawa} % 7p
+\subfile{sections/Onosaka/Bushi_Onosaka} % 1p
 \subfile{sections/Kurahara/template} % 6p
 \subfile{sections/moriyama/moriyama} % 8p
 \subfile{sections/Kokubun/main} % 5p
@@ -48,7 +49,7 @@
 %%%%%%%%   付録・編集後記   %%%%%%%%
 \appendix
 % \subfile{sections/appendix} % 付録
-
+\subfile{sections/Nakahara/bump} % 2p
 \backmatter % あとがき、編集後記はこの下に
 \subfile{sections/kouki} % 編集後記
 %\printbibliography[title=参考文献]

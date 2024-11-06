@@ -200,3 +200,4 @@ after_space=1.5ex,
 \newcommand{\tabref}[1]{表\ref{tab:#1}}
 %\newcommand{\eqref}[1]{式(\ref{eq:#1})}
 \renewcommand{\eqref}[1]{式(\ref{eq:#1})}
+\newcommand{\SuperNova}{~\raisebox{-.5\zw}{\includegraphics[height=1.5\zw, width=4.5\zw]{figures/SuperNova_TitleLogo.png}}~}

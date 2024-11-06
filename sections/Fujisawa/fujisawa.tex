@@ -9,7 +9,7 @@
 
 \begin{document}
 \chapter{星座早見盤を3D化したい} % タイトル
-\rightline{大学院1年 藤澤春風} % 学年と名前（ハンドルネームでも可）
+\rightline{M1 藤澤春風} % 学年と名前（ハンドルネームでも可）
 
 
 %_________________星座早見盤の描画______________________
@@ -22,9 +22,9 @@
 過去の部誌には、優秀な先輩が残してくれた「今日の星空を計算したい$^\text{\cite{bib01}}$」「今日の星空を描画したい$^\text{\cite{bib02}}$」「今日の惑星はどこに見える？$^\text{\cite{bib03}}$」という3つの記事があり、恒星や惑星の位置計算から描画方法まで詳しく書いてある。これらを参考にしながらPythonで星座早見盤を作成してみた（図\ref{fig01}）。
 \begin{figure}[H]
   \centering
-  \label{fig01}
   \includegraphics[width=15cm]{sections/Fujisawa/image/planisphere_normal.png}
   \caption{2024年11月25日0時0分0秒の星座早見盤}
+  \label{fig01}
 \end{figure}
 今年の部誌はモノクロ印刷らしいので、紙面版の部誌を読んでいる読者には伝わらないと思うが、星座に含まれる恒星たちはその色までほぼ正確に再現している。さらに、一定以上の明るさの恒星はグラデーションで星の輝きを表現している。図\ref{fig01}の右側の拡大図を見てもらえば、恒星の輪郭周辺がグラデーションになっているのが分かる…かもしれない。
 
@@ -57,9 +57,9 @@ $\cos{\theta} = \frac{ \mathbf{a} \cdot \mathbf{b} }{ |\mathbf{a}| |\mathbf{b} |
   \centering
   \begin{minipage}[b]{0.45\linewidth}
     \centering
-    \label{fig:split}
     \includegraphics[width=6cm]{sections/Fujisawa/image/starline_split.PNG}
     \caption{星座線を4等分した時の分割点}
+    \label{fig:split}
   \end{minipage}
   \begin{minipage}[b]{0.45\linewidth}
     \centering
@@ -82,15 +82,15 @@ $\mathbf{a}$と$\mathbf{b}$を最短距離で結ぶ球面上の線分をN等分�
   \centering
   \begin{minipage}[b]{0.45\linewidth}
     \centering
-    \label{fig03}
     \includegraphics[scale=0.6]{sections/Fujisawa/image/correct_constellations.png}
     \caption{球面上に描画した星座線}
+    \label{fig03}
   \end{minipage}
   \begin{minipage}[b]{0.45\linewidth}
     \centering
-    \label{fig04}
     \includegraphics[scale=0.6]{sections/Fujisawa/image/wrong_constellations.png}
     \caption{直線で描画した星座線}
+    \label{fig04}
   \end{minipage}
 \end{figure}
 
@@ -159,9 +159,9 @@ $\mathbf{a}$と$\mathbf{b}$を最短距離で結ぶ球面上の線分をN等分�
 \newpage
 \begin{figure}[H]
   \centering
-  \label{fig:stereogram}
   \includegraphics[width=13cm]{sections/Fujisawa/image/CrossEyed_2024_11_25_0_0_0.png}
   \caption{2024年11月25日0時0分0秒の星座早見盤（立体視ver）}
+  \label{fig:stereogram}
 \end{figure}
 \newpage
 
